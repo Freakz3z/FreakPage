@@ -4,6 +4,7 @@
 <head>
 <!-- 基础信息 -->
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 <title>Freakkの个人主页</title>
 <!-- jQuery -->
 <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.5.1/jquery.min.js"></script>
@@ -12,9 +13,7 @@
 <!-- 引入样式 -->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/pyramid-loader.css">
-<link rel="stylesheet" href="css/checkbox.css">
 <link rel="stylesheet" href="css/mobile.css">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 </head>
 <style>
 /* 引入字体 */
@@ -44,40 +43,38 @@
     </div>  
   </div>
 </div>
-<!-- 中央容器 --><div class="midcontainer">
-  <!-- 头像 -->
-  <div class="image"><img src="pic/avatar.jpg" alt="Avatar"></div>
-  <!-- more -->
-  <div class="more">More about me</div>
-  <!-- 天气 -->
-  <div id="weather" class="weather"></div>
-  <!-- 消息盒子 -->
-  <div class="message-box"></div>
-  <!-- 一言 -->
-  <div id="one-word" class="one-word">
-    <div id="one-word_text" class="one-word_text"></div>
-    <div id="one-word_from" class="one-word_from"></div>
-  </div>
-</div>
 <!-- 背景 -->
 <div class="background-all">
   <img id="background" src="pic/background.png">
   <div class="cover"></div>
 </div>
-<!-- 背景音乐播放器 -->
-<audio id="musicPlayer" controls class="audio-element"></audio>
-<!-- 父容器 -->
-<div class="container">
-    <!-- 时间日期 -->
-    <div id="time-button" class="time"><time id="current-time"></time></div>
+<!-- 全局容器 -->
+<div id="container" class="container">
+
+  <!-- 时间 -->
+  <div id="time" class="time"><time id="current-time"></time></div>
+  <!-- more -->
+  <div id="more" class="more">More about</div>
+  <!-- 消息 -->
+  <div class="message-box"></div>
+</div>
+<!-- 中央容器 -->
+<div id="mid-container" class="mid-container">
+  <a href="https://github.com/Freakz3z/Blog" id="avatar" class="image"><img src="pic/avatar.jpg"></a>
+  <div id="weather" class="weather"></div>
+  <div id="one-word" class="one-word">
+    <div id="one-word_text" class="one-word_text"></div>
+    <div id="one-word_from" class="one-word_from"></div>
+  </div>
+</div>
+<!-- more容器 -->
+<div id="more-container" class="more-container">
+  <!-- 背景音乐播放器 -->
+  <audio id="audio" controls class="audio-element"></audio>
+  <!-- saying -->
+  <div id="saying" class="saying"></div>
 </div>
 </body>
-<script>
-// 禁用右键
-document.addEventListener('contextmenu', function (event) {
-event.preventDefault();
-});
-</script>
 <script src="js/main.js"></script>
 <script src="js/message.js"></script>
 <script src="js/time.js"></script>

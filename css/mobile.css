@@ -1,0 +1,47 @@
+@media (max-width: 1800px) {
+    .time {
+        font-size: 25rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .message-box {
+        width: auto;
+        max-width: 30rem;
+    }
+    .time {
+        font-size: 15rem;
+    }
+    .more {
+        width: 14rem;
+    }
+    .one-word {
+        width: 20rem;
+    }
+    .weather {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .time {
+        font-size: 10rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .message-box {
+        width: auto;
+        max-width: 20rem;
+    }
+    .weather {
+        display: none;
+    }
+    .one-word{
+        top: 60%;
+    }
+    .image img {
+        width: 120px;
+        height: 120px;
+    }
+}

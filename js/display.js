@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const musicPlayer = document.getElementById('musicPlayer');
+    const musicPlayer = document.getElementById('audio');
     const musicUrl = 'music/Tangent - DAYDREAM.mp3';
     
     // 检查本地存储中是否有保存的音乐播放时间
