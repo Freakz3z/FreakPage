@@ -1,0 +1,21 @@
+@media (max-width: 1200px) {
+    .audio-element {
+        display: none;
+    }
+    .message-box {
+        width: auto;
+        max-width: 30rem;
+    }
+    .time {
+        display: none;
+    }
+    .more {
+        width: 14rem;
+    }
+    .one-word {
+        width: 25rem;
+    }
+    .weather {
+        width: 25rem;
+    }
+}
