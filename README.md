@@ -10,7 +10,7 @@
 - [x] 待办
 - [x] 背景音乐
 - [x] 页面跳转
-* [x] IP查询
+* [x] IP查询(仅支持电脑）
 * [x] 解决API调用失败问题
 * [x] 重构CSS代码
 * [x] 移动端适配
@@ -18,9 +18,3 @@
 * [ ] 音乐播放器
 * [ ] 音乐可视化
 * [ ] 时间胶囊
-
-# 原项目地址
-- https://github.com/Freakz3z/Blog_Demo
-
-# Reference
-- https://github.com/wuhobin/blog-home
