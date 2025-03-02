@@ -1,0 +1,60 @@
+.sidebar {
+    position: fixed;
+    left: 0%;
+    width: 4rem;
+    height: 4.2rem;
+    margin: 20px 20px;
+    padding: 10px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    text-align: center;
+    z-index: 1000;
+    cursor: default;
+    font-family: MiSans;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar:hover {
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* 图标的容器样式 */
+.sidebar-element-container {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    gap: 7.5%; /* SVG 之间的间距 */
+    margin-top: 10px;
+    margin-bottom: 10px; /* 底部留出空间 */ 
+    /* justify-content: center; 垂直居中对齐 */
+    align-items: center; /* 水平居中对齐 */
+    height: 100%; /* 确保容器有高度，便于居中 */
+    user-select: none;
+}
+
+/* 每个图标和文本的容器 */
+.sidebar-element {
+    display: flex; /* 使用 flexbox 布局 */
+    align-items: center; /* 垂直居中对齐 */
+    position: relative; /* 使位置相对 */
+    cursor: pointer;
+    transition: transform 0.3s; /* 鼠标悬停动画 */
+    user-select: none;
+}
+.sidebar-element:hover {
+    transform: scale(1.1); /* 鼠标悬停时放大 */
+}
+
+/* 图标的样式 */ 
+.sidebar-element-icon {
+    width: 3rem;
+    height: 3rem; 
+    object-fit: contain; /* 保持图标的比例 */
+    margin: 0 auto; /* 自动左右边距以实现居中 */
+    user-select: none;
+}

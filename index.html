@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <!-- 基础信息 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <title>Freakの个人主页</title>
+  <!-- 引入icon -->
+  <link rel="shortcut icon" href="pic/favicon.ico">
+  <!-- 引入样式 -->       
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pyramid-loader.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/music.css">
+  <link rel="stylesheet" href="css/more.css">
+</head>
+
+<style>
+  /* 引入字体 */
+  @font-face {
+      font-family: 'Pacifico';
+      src: url('font/Pacifico-Regular.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'MiSans';
+      src: url('font/MiSans-Regular.subset.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'LED';
+      src: url('font/UnidreamLED.ttf') format('truetype');
+  }
+</style>
+
+<body>
+  <!-- 加载动画 -->
+  <div id="loader">
+    <div class="pyramid-loader">
+      <div class="wrapper">
+        <span class="side side1"></span>
+        <span class="side side2"></span>
+        <span class="side side3"></span>
+        <span class="side side4"></span>
+        <span class="shadow"></span>
+      </div>  
+    </div>
+  </div>
+
+  <!-- 背景 -->
+  <div class="background-all">
+    <img id="background" src="bg/1.png" alt="background">
+    <div class="cover"></div>
+  </div> 
+
+  <!-- 消息 -->
+  <div id="message-box" class="message-box"></div>
+  <!-- 侧边栏 -->
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-element-container">
+        <!-- 菜单 -->
+        <div id="sidebar-element-list" class="sidebar-element">
+            <img src="pic/list.svg" class="sidebar-element-icon" draggable="false" alt="list">
+        </div>
+        <!-- 记录 -->
+        <div id="sidebar-element-word" class="sidebar-element" style="display: none;">
+          <img src="pic/自我介绍.svg" class="sidebar-element-icon" draggable="false" alt="word">
+        </div>
+        <!-- 天气 -->
+        <!-- <div id="sidebar-element-weather" class="sidebar-element" style="display: none;">
+            <img src="pic/weather.svg" class="sidebar-element-icon" draggable="false" alt="weather">
+        </div> -->
+        <!-- 音乐 -->
+        <div id="sidebar-element-music" class="sidebar-element" style="display: none;">
+            <img src="pic/music.svg" class="sidebar-element-icon" draggable="false" alt="music">
+        </div>
+        <!-- 更多 -->
+        <!-- <div id="sidebar-element-more" class="sidebar-element" style="display: none;">
+            <img src="pic/more.svg" class="sidebar-element-icon" draggable="false" alt="more">
+        </div> -->
+    </div>
+  </div>
+
+  <!-- 时间 -->
+  <div id="time" class="time"><time id="current-time"></time></div>
+  <!-- 一言 -->
+  <div class="one-word">
+    <div id="one-word_text" class="one-word_text"></div>
+    <div id="one-word_from" class="one-word_from"></div>
+  </div>
+  <!-- 音乐播放器 -->
+  <div id="audio-container" class="audio-container">
+    <div class="player-header" style="display: flex; align-items: center;">
+        <img id="album-cover" src="pic/花火大会.webp" alt="Album Cover" draggable="false" style="width: 80px; height: 80px; border-radius: 10px; margin-right: 10px;user-select: none;">
+        <div>
+            <h4 id="song-message" style="margin: 0;">花火大会 RADWIMPS</h4>
+        </div>
+    </div>
+    <audio id="audio" src="music/RADWIMPS - 花火大会.mp3"></audio>
+    <div class="controls">
+        <button id="play-button" style="border: none; background: none; padding: 0;">
+            <img src="pic/播放.svg" alt="Play" style="width: 30px; height: 30px; cursor: pointer;">
+        </button>
+        <button id="pause-button" style="display: none; border: none; background: none; padding: 0;">
+            <img src="pic/暂停.svg" alt="Pause" style="width: 30px; height: 30px; cursor: pointer;">
+        </button>
+        <button id="volume-button" style="border: none; background: none; padding: 0; margin-left: 10px;">
+            <img src="pic/音量.svg" alt="Volume" style="width: 30px; height: 30px; cursor: pointer;">
+        </button>
+        <input type="range" id="volume-control" min="0" max="1" step="0.01" value="0.4" style="width: 100%; margin-left: 10px; cursor: pointer;">
+    </div>
+    <div id="progress-container" style="width: 100%; height: 7px; cursor: pointer;">
+        <div id="progress-bar" style="height: 7px; background: #292828;"></div>
+    </div>
+  </div>
+
+  <!-- 中央容器 -->
+  <div id="mid-container" class="mid-container">
+    <!-- 头像 -->
+    <a href="https://freak.cpolar.top" target="_blank" draggable="false" class="image"><img src="pic/avatar.jpg"></a>
+    <!-- 天气 --> 
+    <div id="weather" class="weather"></div>
+  </div>
+  <!-- more容器 -->
+  <div id="more-container" class="more-container">
+    <span class="more-text">I'm Freak.</span>
+    <span class="more-text">I'm a student,</span>
+    <span class="more-text">web developer,</span>
+    <span class="more-text">ai engineer.</span>
+  </div>
+  <div id="tail" class="tail" style="cursor: default;">Copyright © by Freak All Rights Reserved.</div>
+  <!-- 引入 jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- 引入JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/message.js"></script>
+  <script src="js/time.js"></script>
+  <script src="js/music.js"></script> 
+  <script src="js/word.js"></script>
+  <script src="js/sidebar.js"></script>
+
+</body>
+</html>
